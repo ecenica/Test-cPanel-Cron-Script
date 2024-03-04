@@ -11,7 +11,7 @@
  * 3. Ensure that the path to the cron_test.txt file is accessible and writable by the script.
  * 
  * Example Cron Job Command:
- * /usr/bin/php /home/yourusername/public_html/cron_test.php
+ * /usr/bin/php /home/yourusername/public_html/cron/cron_test.php
  * 
  * Author: Ecenica
  * Version: 1.0
