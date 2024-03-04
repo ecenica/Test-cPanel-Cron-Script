@@ -8,7 +8,9 @@
  * Instructions:
  * 1. Place this script in your Ecenica cPanel's public_html directory.
  * 2. Set up a cron job in Ecenica cPanel to execute this script at regular intervals.
- * 3. Ensure that the 'cron' folder exists in your public_html directory and is writable.
+ * 3. If using `DOCUMENT_ROOT` for the file path, consider using `wget` as a cPanel command in the cron job.
+ * 4. Ensure that the 'cron' folder exists in your public_html directory and is writable.
+ * 5. If using `wget`, ensure that .htaccess rules allow access to the script.
  * 
  * Note: When running from CLI, __DIR__ should be used instead of DOCUMENT_ROOT.
  * 
