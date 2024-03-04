@@ -11,6 +11,7 @@
  * 3. If using `DOCUMENT_ROOT` for the file path, consider using `wget` as a cPanel command in the cron job.
  * 4. Ensure that the 'cron' folder exists in your public_html directory and is writable.
  * 5. If using `wget`, ensure that .htaccess rules allow access to the script.
+ * 6. You can also test this script using SSH by navigating to the directory containing this script and running: `php cron_test.php`
  * 
  * Note: When running from CLI, __DIR__ should be used instead of DOCUMENT_ROOT.
  * 
