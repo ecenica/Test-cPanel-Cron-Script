@@ -6,25 +6,35 @@
  * It writes a timestamp to a file every time it is executed.
  * 
  * Instructions:
- * 1. Place this script in your Ecenica cPanel's public_html directory in a subdirectory called 'cron'
+ * 1. Place this script in your Ecenica cPanel's public_html directory.
  * 2. Set up a cron job in Ecenica cPanel to execute this script at regular intervals.
- * 3. Ensure that the path to the cron_test.txt file is accessible and writable by the script.
+ * 3. Ensure that the 'cron' folder exists in your public_html directory and is writable.
+ * 
+ * Note: When running from CLI, __DIR__ should be used instead of DOCUMENT_ROOT.
  * 
  * Example Cron Job Command:
- * /usr/bin/php /home/yourusername/public_html/cron/cron_test.php
+ * /usr/bin/php /home/yourusername/public_html/cron_test.php
  * 
  * Author: Ecenica
- * Version: 1.0
+ * Version: 1.1
  */
 
-// Get the path to the public_html directory
-$publicHtmlPath = $_SERVER['DOCUMENT_ROOT'];
+// Get the path to the public_html directory when running from CLI
+$publicHtmlPath = __DIR__;
 
 // Specify the subdirectory name
 $subdirectory = '/cron/';
 
+// Set the folder path where the timestamp will be stored
+$folderPath = $publicHtmlPath . $subdirectory;
+
+// Check if the folder exists, if not, create it
+if (!file_exists($folderPath)) {
+    mkdir($folderPath, 0777, true);
+}
+
 // Set the file path where the timestamp will be stored
-$filePath = $publicHtmlPath . $subdirectory . 'cron_test.txt';
+$filePath = $folderPath . 'cron_test.txt';
 
 // Open the file (create it if it doesn't exist) in append mode
 $file = fopen($filePath, 'a');
