@@ -10,7 +10,7 @@ This project provides a robust PHP script and test suite for verifying cron job 
 - **Success and error logging** for easy troubleshooting
 - **Best practices** for file organization and version control
 
-## Ecenica Hosting Pitch
+## Ecenica Hosting
 Ecenica Hosting offers reliable, secure, and user-friendly web hosting solutions. With cPanel access, you can easily manage your websites, databases, and scheduled tasks. Ecenica's support and infrastructure ensure your sites and cron jobs run smoothly, making it an excellent choice for businesses and developers seeking hassle-free hosting.
 
 ### Why cPanel?
