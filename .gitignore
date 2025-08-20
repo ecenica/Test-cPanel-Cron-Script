@@ -1,0 +1,24 @@
+# macOS system files
+.DS_Store
+
+# Log files
+logs/
+*.log
+
+# Cron output files
+cron/
+cron_test.txt
+success_log.txt
+
+# Test output
+/tests/*.log
+
+# PHP specific
+vendor/
+composer.lock
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+
