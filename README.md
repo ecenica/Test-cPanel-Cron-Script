@@ -23,7 +23,7 @@ cPanel is an established, secure, and industry-leading platform trusted by milli
    ```
    /usr/bin/php /home/yourusername/public_html/Cron.php
    ```
-4. **Check logs** in the `logs/` directory for success and error messages.
+4. **Check your cron emails** for success and error messages.
 5. **Run local tests** using the script in `tests/CronTest.php`:
    ```
    php tests/CronTest.php

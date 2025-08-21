@@ -15,11 +15,24 @@
  *
  * Note: When running from CLI, __DIR__ should be used instead of DOCUMENT_ROOT.
  *
- * Example Cron Job Command:
+ * Example Cron Job Commands:
+ *
  * /usr/bin/php /home/yourusername/public_html/Cron.php
  *
+ * wget -q -O - https://example.com/Cron.php
+ *
+ * curl https://example.com/Cron.php
+ *
+ * Example Cron Job Commands with Logging:
+ *
+ * /usr/bin/php /home/yourusername/public_html/Cron.php >> /home/yourusername/logs/cron.log 2>&1
+ *
+ * wget -q -O - https://example.com/Cron.php >> /home/yourusername/cron.log 2>&1
+ *
+ * curl -s https://example.com/Cron.php >> /home/yourusername/cron.log 2>&1
+ *
  * Author: Ecenica
- * Version: 2.2 - Renamed class to Cron
+ * Version: 2.3 - Updated examples
  */
 
 class Cron {
